@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NewsHub - Главные новости</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="header-content">
+            <div class="logo">
+              <h1>NewsHub</h1>
+              <span>Главные новости</span>
+            </div>
+            <nav class="navigation">
+              <ul>
+                <li><a href="#" class="nav-link active">Главная</a></li>
+                <li><a href="#" class="nav-link">Категории</a></li>
+                <li><a href="#" class="nav-link">Контакты</a></li>
+              </ul>
+            </nav>
+            <div class="header-actions">
+              <button class="search-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M21 21L16.514 16.506L21 21ZM19 10.5C19 15.194 15.194 19 10.5 19C5.806 19 2 15.194 2 10.5C2 5.806 5.806 2 10.5 2C15.194 2 19 5.806 19 10.5Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="main">
+        <div class="container">
+          <div class="layout">
+            <section class="news-section">
+              <div class="section-header">
+                <h2>Последние новости</h2>
+                <div class="filter-tabs">
+                  <button class="filter-tab active">Все</button>
+                  <button class="filter-tab">Политика</button>
+                  <button class="filter-tab">Экономика</button>
+                  <button class="filter-tab">Спорт</button>
+                </div>
+              </div>
+              <div class="news-grid" id="news-container">
+                <!-- Новости загружаются через JavaScript -->
+              </div>
+            </section>
+
+            <aside class="sidebar">
+              <div class="sidebar-widget">
+                <h3>Топ-5 популярных новостей</h3>
+                <ol class="popular-news">
+                  <li>
+                    <a href="#" class="popular-link">
+                      <span class="popular-rank">1</span>
+                      <span class="popular-text"
+                        >Новые меры поддержки малого бизнеса в 2024 году</span
+                      >
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="popular-link">
+                      <span class="popular-rank">2</span>
+                      <span class="popular-text"
+                        >Изменения в правилах дорожного движения с марта</span
+                      >
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="popular-link">
+                      <span class="popular-rank">3</span>
+                      <span class="popular-text"
+                        >Рекордные продажи электромобилей в России</span
+                      >
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="popular-link">
+                      <span class="popular-rank">4</span>
+                      <span class="popular-text"
+                        >Открытие новой ветки метро в Москве</span
+                      >
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="popular-link">
+                      <span class="popular-rank">5</span>
+                      <span class="popular-text"
+                        >Цифровизация государственных услуг</span
+                      >
+                    </a>
+                  </li>
+                </ol>
+              </div>
+
+              <div class="sidebar-widget">
+                <h3>Категории</h3>
+                <div class="category-tags">
+                  <span class="category-tag">Политика</span>
+                  <span class="category-tag">Экономика</span>
+                  <span class="category-tag">Спорт</span>
+                  <span class="category-tag">Технологии</span>
+                  <span class="category-tag">Культура</span>
+                  <span class="category-tag">Здоровье</span>
+                </div>
+              </div>
+
+              <div class="sidebar-widget newsletter-widget">
+                <h3>Рассылка новостей</h3>
+                <p>Подпишитесь на ежедневную рассылку главных новостей</p>
+                <form class="newsletter-form">
+                  <input
+                    type="email"
+                    placeholder="Ваш email"
+                    class="newsletter-input"
+                  />
+                  <button type="submit" class="newsletter-btn">
+                    Подписаться
+                  </button>
+                </form>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-content">
+            <div class="footer-section">
+              <div class="footer-logo">
+                <h3>NewsHub</h3>
+                <p>Самые актуальные и проверенные новости</p>
+              </div>
+            </div>
+            <div class="footer-section">
+              <h4>Разделы</h4>
+              <ul class="footer-links">
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Политика</a></li>
+                <li><a href="#">Экономика</a></li>
+                <li><a href="#">Спорт</a></li>
+              </ul>
+            </div>
+            <div class="footer-section">
+              <h4>Компания</h4>
+              <ul class="footer-links">
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Контакты</a></li>
+                <li><a href="#">Реклама</a></li>
+                <li><a href="#">Вакансии</a></li>
+              </ul>
+            </div>
+            <div class="footer-section">
+              <h4>Контакты</h4>
+              <div class="contact-info">
+                <p>
+                  Email: <a href="mailto:info@newshub.ru">info@newshub.ru</a>
+                </p>
+                <p>Телефон: <a href="tel:+78001234567">8 (800) 123-45-67</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>&copy; 2024 NewsHub. Все права защищены.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
