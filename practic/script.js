@@ -27,7 +27,7 @@ function loadNews() {
                 <span class="news-category">${category}</span>
                 <span class="news-date">${formatDate(date)}</span>
             </div>
-            <div class="news-preview" style="display: none;">
+            <div class="news-preview">
                 ${preview}
             </div>
             <button class="read-more-btn" onclick="toggleNewsPreview(${index})">Читать далее</button>
@@ -50,29 +50,14 @@ function toggleNewsPreview(index) {
   const preview = currentCard.querySelector(".news-preview");
   const button = currentCard.querySelector(".read-more-btn");
 
-  if (preview.style.display === "none" || !preview.style.display) {
-    preview.style.display = "block";
-    preview.style.animation = "fadeIn 0.5s ease-in";
+  preview.classList.toggle("show");
+
+  if (preview.classList.contains("show")) {
     button.textContent = "Свернуть";
   } else {
-    preview.style.display = "none";
     button.textContent = "Читать далее";
   }
 }
-
-// Добавляем CSS анимацию для плавного появления
-const style = document.createElement("style");
-style.textContent = `
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(-10px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-    
-    .news-preview {
-        transition: all 0.3s ease;
-    }
-`;
-document.head.appendChild(style);
 
 // Загружаем новости при загрузке страницы
 document.addEventListener("DOMContentLoaded", loadNews);
